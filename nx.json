@@ -10,5 +10,67 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "interface-form-field": {
+      "tags": []
+    },
+    "interface-task-info": {
+      "tags": []
+    },
+    "form-elements-input": {
+      "tags": []
+    },
+    "form-elements-textarea": {
+      "tags": []
+    },
+    "form-elements-file": {
+      "tags": []
+    },
+    "form-elements-slider": {
+      "tags": []
+    },
+    "form-elements-radio-button": {
+      "tags": []
+    },
+    "form-elements-checkbox": {
+      "tags": []
+    },
+    "dynamic-form": {
+      "tags": []
+    },
+    "customer-portal": {
+      "tags": []
+    },
+    "customer-portal-e2e": {
+      "tags": [],
+      "implicitDependencies": ["customer-portal"]
+    },
+    "utils": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "router": {
+      "tags": []
+    },
+    "errors": {
+      "tags": []
+    },
+    "auth": {
+      "tags": []
+    },
+    "customer-portal-lazy-lending-needs": {
+      "tags": []
+    },
+    "customer-portal-lazy-business-details": {
+      "tags": []
+    },
+    "customer-portal-eager-home": {
+      "tags": []
+    },
+    "customer-portal-lazy-dashboard": {
+      "tags": []
+    }
+  }
 }

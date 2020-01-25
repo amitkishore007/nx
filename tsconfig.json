@@ -15,7 +15,44 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rubicon/interface/form-field": [
+        "libs/interface/form-field/src/index.ts"
+      ],
+      "@rubicon/interface/task-info": ["libs/interface/task-info/src/index.ts"],
+      "@rubicon/form-elements/input": ["libs/form-elements/input/src/index.ts"],
+      "@rubicon/form-elements/textarea": [
+        "libs/form-elements/textarea/src/index.ts"
+      ],
+      "@rubicon/form-elements/file": ["libs/form-elements/file/src/index.ts"],
+      "@rubicon/form-elements/slider": [
+        "libs/form-elements/slider/src/index.ts"
+      ],
+      "@rubicon/form-elements/radio-button": [
+        "libs/form-elements/radio-button/src/index.ts"
+      ],
+      "@rubicon/form-elements/checkbox": [
+        "libs/form-elements/checkbox/src/index.ts"
+      ],
+      "@rubicon/dynamic-form": ["libs/dynamic-form/src/index.ts"],
+      "@rubicon/utils": ["libs/utils/src/index.ts"],
+      "@rubicon/api": ["libs/api/src/index.ts"],
+      "@rubicon/router": ["libs/router/src/index.ts"],
+      "@rubicon/errors": ["libs/errors/src/index.ts"],
+      "@rubicon/auth": ["libs/auth/src/index.ts"],
+      "@rubicon/customer-portal/lazy/lending-needs": [
+        "libs/customer-portal/lazy/lending-needs/src/index.ts"
+      ],
+      "@rubicon/customer-portal/lazy/business-details": [
+        "libs/customer-portal/lazy/business-details/src/index.ts"
+      ],
+      "@rubicon/customer-portal/eager/home": [
+        "libs/customer-portal/eager/home/src/index.ts"
+      ],
+      "@rubicon/customer-portal/lazy/dashboard": [
+        "libs/customer-portal/lazy/dashboard/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
