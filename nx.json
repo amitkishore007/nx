@@ -57,19 +57,34 @@
     "errors": {
       "tags": []
     },
-    "auth": {
-      "tags": []
-    },
     "customer-portal-lazy-lending-needs": {
       "tags": []
     },
     "customer-portal-lazy-business-details": {
       "tags": []
     },
-    "customer-portal-eager-home": {
+    "customer-portal-lazy-dashboard": {
       "tags": []
     },
-    "customer-portal-lazy-dashboard": {
+    "customer-portal-ui-kit": {
+      "tags": []
+    },
+    "signup": {
+      "tags": []
+    },
+    "login": {
+      "tags": []
+    },
+    "customer-portal-home": {
+      "tags": []
+    },
+    "customer-portal-lending-needs": {
+      "tags": []
+    },
+    "customer-portal-business-details": {
+      "tags": []
+    },
+    "customer-portal-dashboard": {
       "tags": []
     }
   }

@@ -263,8 +263,17 @@
               "apps/customer-portal/src/favicon.ico",
               "apps/customer-portal/src/assets"
             ],
-            "styles": ["apps/customer-portal/src/styles.css"],
-            "scripts": []
+            "styles": [
+              "apps/customer-portal/src/assets/css/bootstrap.min.css",
+              "apps/customer-portal/src/assets/css/app.css"
+            ],
+            "scripts": [
+              "apps/customer-portal/src/assets/js/jquery-3.4.0.min.js",
+              "apps/customer-portal/src/assets/js/popper.min.js",
+              "apps/customer-portal/src/assets/js/bootstrap.min.js",
+              "apps/customer-portal/src/assets/js/owl.carousel.min.js",
+              "apps/customer-portal/src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -470,148 +479,199 @@
       },
       "schematics": {}
     },
-    "auth": {
+    "customer-portal-ui-kit": {
       "projectType": "library",
-      "root": "libs/auth",
-      "sourceRoot": "libs/auth/src",
+      "root": "libs/customer-portal/ui-kit",
+      "sourceRoot": "libs/customer-portal/ui-kit/src",
       "prefix": "rubicon",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/auth/tsconfig.lib.json",
-              "libs/auth/tsconfig.spec.json"
+              "libs/customer-portal/ui-kit/tsconfig.lib.json",
+              "libs/customer-portal/ui-kit/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/auth/**"]
+            "exclude": ["**/node_modules/**", "!libs/customer-portal/ui-kit/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/auth/jest.config.js",
-            "tsConfig": "libs/auth/tsconfig.spec.json",
-            "setupFile": "libs/auth/src/test-setup.ts"
+            "jestConfig": "libs/customer-portal/ui-kit/jest.config.js",
+            "tsConfig": "libs/customer-portal/ui-kit/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/ui-kit/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "customer-portal-lazy-lending-needs": {
+    "signup": {
       "projectType": "library",
-      "root": "libs/customer-portal/lazy/lending-needs",
-      "sourceRoot": "libs/customer-portal/lazy/lending-needs/src",
+      "root": "libs/signup",
+      "sourceRoot": "libs/signup/src",
       "prefix": "rubicon",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/customer-portal/lazy/lending-needs/tsconfig.lib.json",
-              "libs/customer-portal/lazy/lending-needs/tsconfig.spec.json"
+              "libs/signup/tsconfig.lib.json",
+              "libs/signup/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/signup/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/signup/jest.config.js",
+            "tsConfig": "libs/signup/tsconfig.spec.json",
+            "setupFile": "libs/signup/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "login": {
+      "projectType": "library",
+      "root": "libs/login",
+      "sourceRoot": "libs/login/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/login/tsconfig.lib.json",
+              "libs/login/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/login/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/login/jest.config.js",
+            "tsConfig": "libs/login/tsconfig.spec.json",
+            "setupFile": "libs/login/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-home": {
+      "projectType": "library",
+      "root": "libs/customer-portal/home",
+      "sourceRoot": "libs/customer-portal/home/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/home/tsconfig.lib.json",
+              "libs/customer-portal/home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/customer-portal/home/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/customer-portal/home/jest.config.js",
+            "tsConfig": "libs/customer-portal/home/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-lending-needs": {
+      "projectType": "library",
+      "root": "libs/customer-portal/lending-needs",
+      "sourceRoot": "libs/customer-portal/lending-needs/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/lending-needs/tsconfig.lib.json",
+              "libs/customer-portal/lending-needs/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/customer-portal/lazy/lending-needs/**"
+              "!libs/customer-portal/lending-needs/**"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/customer-portal/lazy/lending-needs/jest.config.js",
-            "tsConfig": "libs/customer-portal/lazy/lending-needs/tsconfig.spec.json",
-            "setupFile": "libs/customer-portal/lazy/lending-needs/src/test-setup.ts"
+            "jestConfig": "libs/customer-portal/lending-needs/jest.config.js",
+            "tsConfig": "libs/customer-portal/lending-needs/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/lending-needs/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "customer-portal-lazy-business-details": {
+    "customer-portal-business-details": {
       "projectType": "library",
-      "root": "libs/customer-portal/lazy/business-details",
-      "sourceRoot": "libs/customer-portal/lazy/business-details/src",
+      "root": "libs/customer-portal/business-details",
+      "sourceRoot": "libs/customer-portal/business-details/src",
       "prefix": "rubicon",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/customer-portal/lazy/business-details/tsconfig.lib.json",
-              "libs/customer-portal/lazy/business-details/tsconfig.spec.json"
+              "libs/customer-portal/business-details/tsconfig.lib.json",
+              "libs/customer-portal/business-details/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/customer-portal/lazy/business-details/**"
+              "!libs/customer-portal/business-details/**"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/customer-portal/lazy/business-details/jest.config.js",
-            "tsConfig": "libs/customer-portal/lazy/business-details/tsconfig.spec.json",
-            "setupFile": "libs/customer-portal/lazy/business-details/src/test-setup.ts"
+            "jestConfig": "libs/customer-portal/business-details/jest.config.js",
+            "tsConfig": "libs/customer-portal/business-details/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/business-details/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "customer-portal-eager-home": {
+    "customer-portal-dashboard": {
       "projectType": "library",
-      "root": "libs/customer-portal/eager/home",
-      "sourceRoot": "libs/customer-portal/eager/home/src",
+      "root": "libs/customer-portal/dashboard",
+      "sourceRoot": "libs/customer-portal/dashboard/src",
       "prefix": "rubicon",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/customer-portal/eager/home/tsconfig.lib.json",
-              "libs/customer-portal/eager/home/tsconfig.spec.json"
+              "libs/customer-portal/dashboard/tsconfig.lib.json",
+              "libs/customer-portal/dashboard/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/customer-portal/eager/home/**"
+              "!libs/customer-portal/dashboard/**"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/customer-portal/eager/home/jest.config.js",
-            "tsConfig": "libs/customer-portal/eager/home/tsconfig.spec.json",
-            "setupFile": "libs/customer-portal/eager/home/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "customer-portal-lazy-dashboard": {
-      "projectType": "library",
-      "root": "libs/customer-portal/lazy/dashboard",
-      "sourceRoot": "libs/customer-portal/lazy/dashboard/src",
-      "prefix": "rubicon",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/customer-portal/lazy/dashboard/tsconfig.lib.json",
-              "libs/customer-portal/lazy/dashboard/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/customer-portal/lazy/dashboard/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/customer-portal/lazy/dashboard/jest.config.js",
-            "tsConfig": "libs/customer-portal/lazy/dashboard/tsconfig.spec.json",
-            "setupFile": "libs/customer-portal/lazy/dashboard/src/test-setup.ts"
+            "jestConfig": "libs/customer-portal/dashboard/jest.config.js",
+            "tsConfig": "libs/customer-portal/dashboard/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/dashboard/src/test-setup.ts"
           }
         }
       },

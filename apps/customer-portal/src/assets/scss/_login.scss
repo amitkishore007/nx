@@ -1,0 +1,123 @@
+.loginPage {
+    max-width: 440px;
+    margin: 2% auto 0;
+    footer .container {
+        padding: $p0;
+    }
+    .b2cLogo {
+        padding: 20px 20px 26px;
+    }
+    .bggradient {
+        @include border-radius(8px 8px 0 0);
+    }
+    .loginFormWrap {
+        padding: $p20;
+    }
+    .copyrightlink li a,
+    .copyright p,
+    .copyright p a {
+        color: $base-color;
+        text-align: left;
+    }
+    .entrustRight {
+        text-align: right;
+        img {
+            max-width: 45%
+        }
+    }
+    .defaultCheckbox .form-check-inline {
+        width: 100%;
+        padding-top: $p10;
+        padding-bottom: $p10;
+    }
+    /* Base for label styling */
+    .defaultCheckbox [type="checkbox"]:not(:checked),
+    .defaultCheckbox [type="checkbox"]:checked {
+        position: absolute;
+        left: -9999px;
+    }
+    .defaultCheckbox [type="checkbox"]:not(:checked)+label,
+    .defaultCheckbox [type="checkbox"]:checked+label {
+        position: relative;
+        padding-left: 2.5em;
+        cursor: pointer;
+    }
+    /* checkbox aspect */
+    .defaultCheckbox [type="checkbox"]:not(:checked)+label:before,
+    .defaultCheckbox [type="checkbox"]:checked+label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -3px;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 2px;
+    }
+    /* checked mark aspect */
+    .defaultCheckbox [type="checkbox"]:not(:checked)+label:after,
+    .defaultCheckbox [type="checkbox"]:checked+label:after {
+        top: 0.2em;
+        left: 10px;
+        position: absolute;
+        box-sizing: border-box;
+        content: '';
+        width: 0.4em;
+        height: 0.80em;
+        transform: rotate(45deg);
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+    /* checked mark aspect changes */
+    .defaultCheckbox [type="checkbox"]:not(:checked)+label:after {
+        opacity: 0;
+        /*transform: scale(0);*/
+    }
+    .defaultCheckbox [type="checkbox"]:checked+label:after {
+        opacity: 1;
+        /*transform: scale(1);*/
+    }
+    /* disabled checkbox */
+    .defaultCheckbox [type="checkbox"]:disabled:not(:checked)+label:before,
+    .defaultCheckbox [type="checkbox"]:disabled:checked+label:before {
+        box-shadow: none;
+        border-color: #bbb;
+        background-color: #ddd;
+    }
+    .defaultCheckbox [type="checkbox"]:disabled:checked+label:after {
+        color: #999;
+    }
+    .defaultCheckbox [type="checkbox"]:disabled+label {
+        color: #aaa;
+    }
+    /* accessibility */
+    .defaultCheckbox [type="checkbox"]:checked:focus+label:before,
+    .defaultCheckbox [type="checkbox"]:not(:checked):focus+label:before {
+        border: 1px dotted #ddd;
+    }
+    .defaultCheckbox .dBluegradient .form-check-label:before {
+        @include gradient-light-darkblue-ckeckbox;
+    }
+}
+
+@media (max-width:575px) {
+    .loginPage {
+        max-width: inherit;
+        margin: 0;
+        .bggradient {
+            border-radius: 0 !important;
+        }
+        footer .container {
+            padding: $p15;
+        }
+        .copyrightlink li a,
+        .copyright p,
+        .copyright p a {
+            text-align: center;
+        }
+        .entrustRight {
+            text-align: center;
+        }
+    }
+}

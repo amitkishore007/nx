@@ -9,11 +9,16 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
+// import { CustomerPortalEagerHomeModule } from '@rubicon/customer-portal/eager/home';
+import { AppRoutingModule } from './app-routing.module';
+import { NxModule } from '@nrwl/angular';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    AppRoutingModule,
+    NxModule.forRoot(),
     StoreModule.forRoot(
       {},
       {
@@ -26,7 +31,18 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+    StoreModule.forRoot(
+      {},
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true
+        }
+      }
+    ),
+    // CustomerPortalEagerHomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,98 @@
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "info": {
+            "task_id": "5c20df2905b64d08287ccd82",
+            "title": "login",
+            "slug": "login",
+            "accordian": false,
+            "allow_multiple": false,
+            "allow_duplicate_email": false,
+            "allow_group": false,
+            "form_fields": [
+                {
+                    "_id": "5c1a434ba229fc9dc49f3902",
+                    "name": "email_address",
+                    "process": "signup",
+                    "type": "input",
+                    "label": "",
+                    "inputType": "text",
+                    "value_api": "",
+                    "options": {},
+                    "validations": [
+                        {
+                            "name": "required",
+                            "validations": "required",
+                            "message": "Please enter email address."
+                        },
+                        {
+                            "name": "pattern",
+                            "validations": "/^([a-zA-ZÀ-ÿ0-9_\\-\\.]{1,90})@([a-zA-Z0-9_\\-]{2,30})\\.([a-zA-Z]{2,30})(\\.([a-zA-Z]){2,5})?$/",
+                            "message": "The value of the field is invalid."
+                        }
+                    ],
+                    "html5_validation": [
+                        {
+                            "maxlength": 155
+                        }
+                    ],
+                    "order": 2,
+                    "placeholder": "Email Address",
+                    "field_arr": [],
+                    "trigger_button": [],
+                    "action": []
+                },
+                {
+                    "_id": "5c1a434ca229fc9dc49f3906",
+                    "name": "password",
+                    "process": "signup",
+                    "type": "input",
+                    "label": "Password",
+                    "inputType": "password",
+                    "value_api": "",
+                    "options": {},
+                    "validations": [
+                        {
+                            "name": "required",
+                            "validations": "required",
+                            "message": "Please enter password."
+                        },
+                        {
+                            "name": "multiple_pattern",
+                            "validations": [
+                                "/^(([a-zA-Z0-9])\\1?(?!\\2))+$/",
+                                "/^(?!^(.)\\1)(?=.*?[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,50})/"
+                            ],
+                            "message": "The value of the field is invalid."
+                        },
+                        {
+                            "name": "minlength",
+                            "validations": "minLength",
+                            "message": "Minimum length is 8 characters",
+                            "args": "8"
+                        },
+                        {
+                            "name": "maxlength",
+                            "validations": "maxLength",
+                            "message": "password should not be more than 50 character.",
+                            "args": 50
+                        }
+                    ],
+                    "html5_validation": [
+                        {
+                            "maxlength": 50,
+                            "minlength": 8
+                        }
+                    ],
+                    "order": 5,
+                    "placeholder": "Password",
+                    "field_arr": [],
+                    "trigger_button": [],
+                    "action": []
+                }
+            ],
+            "skip_fields": []
+        }
+    }
+}

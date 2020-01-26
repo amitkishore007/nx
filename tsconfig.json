@@ -39,18 +39,25 @@
       "@rubicon/api": ["libs/api/src/index.ts"],
       "@rubicon/router": ["libs/router/src/index.ts"],
       "@rubicon/errors": ["libs/errors/src/index.ts"],
-      "@rubicon/auth": ["libs/auth/src/index.ts"],
-      "@rubicon/customer-portal/lazy/lending-needs": [
-        "libs/customer-portal/lazy/lending-needs/src/index.ts"
-      ],
-      "@rubicon/customer-portal/lazy/business-details": [
-        "libs/customer-portal/lazy/business-details/src/index.ts"
-      ],
       "@rubicon/customer-portal/eager/home": [
         "libs/customer-portal/eager/home/src/index.ts"
       ],
-      "@rubicon/customer-portal/lazy/dashboard": [
-        "libs/customer-portal/lazy/dashboard/src/index.ts"
+      "@rubicon/customer-portal/ui-kit": [
+        "libs/customer-portal/ui-kit/src/index.ts"
+      ],
+      "@rubicon/signup": ["libs/signup/src/index.ts"],
+      "@rubicon/login": ["libs/login/src/index.ts"],
+      "@rubicon/customer-portal/home": [
+        "libs/customer-portal/home/src/index.ts"
+      ],
+      "@rubicon/customer-portal/lending-needs": [
+        "libs/customer-portal/lending-needs/src/index.ts"
+      ],
+      "@rubicon/customer-portal/business-details": [
+        "libs/customer-portal/business-details/src/index.ts"
+      ],
+      "@rubicon/customer-portal/dashboard": [
+        "libs/customer-portal/dashboard/src/index.ts"
       ]
     }
   },
