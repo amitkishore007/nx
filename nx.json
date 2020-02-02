@@ -48,31 +48,13 @@
     "utils": {
       "tags": []
     },
-    "api": {
-      "tags": []
-    },
     "router": {
       "tags": []
     },
     "errors": {
       "tags": []
     },
-    "customer-portal-lazy-lending-needs": {
-      "tags": []
-    },
-    "customer-portal-lazy-business-details": {
-      "tags": []
-    },
-    "customer-portal-lazy-dashboard": {
-      "tags": []
-    },
     "customer-portal-ui-kit": {
-      "tags": []
-    },
-    "signup": {
-      "tags": []
-    },
-    "login": {
       "tags": []
     },
     "customer-portal-home": {
@@ -85,6 +67,18 @@
       "tags": []
     },
     "customer-portal-dashboard": {
+      "tags": []
+    },
+    "customer-portal-signup": {
+      "tags": []
+    },
+    "customer-portal-login": {
+      "tags": []
+    },
+    "customer-portal-auth-layout": {
+      "tags": []
+    },
+    "customer-portal-site-layout": {
       "tags": []
     }
   }

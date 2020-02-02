@@ -398,33 +398,6 @@
       },
       "schematics": {}
     },
-    "api": {
-      "projectType": "library",
-      "root": "libs/api",
-      "sourceRoot": "libs/api/src",
-      "prefix": "rubicon",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/api/tsconfig.lib.json",
-              "libs/api/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/api/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/api/jest.config.js",
-            "tsConfig": "libs/api/tsconfig.spec.json",
-            "setupFile": "libs/api/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
     "router": {
       "projectType": "library",
       "root": "libs/router",
@@ -501,60 +474,6 @@
             "jestConfig": "libs/customer-portal/ui-kit/jest.config.js",
             "tsConfig": "libs/customer-portal/ui-kit/tsconfig.spec.json",
             "setupFile": "libs/customer-portal/ui-kit/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "signup": {
-      "projectType": "library",
-      "root": "libs/signup",
-      "sourceRoot": "libs/signup/src",
-      "prefix": "rubicon",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/signup/tsconfig.lib.json",
-              "libs/signup/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/signup/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/signup/jest.config.js",
-            "tsConfig": "libs/signup/tsconfig.spec.json",
-            "setupFile": "libs/signup/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "login": {
-      "projectType": "library",
-      "root": "libs/login",
-      "sourceRoot": "libs/login/src",
-      "prefix": "rubicon",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/login/tsconfig.lib.json",
-              "libs/login/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/login/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/login/jest.config.js",
-            "tsConfig": "libs/login/tsconfig.spec.json",
-            "setupFile": "libs/login/src/test-setup.ts"
           }
         }
       },
@@ -672,6 +591,120 @@
             "jestConfig": "libs/customer-portal/dashboard/jest.config.js",
             "tsConfig": "libs/customer-portal/dashboard/tsconfig.spec.json",
             "setupFile": "libs/customer-portal/dashboard/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-signup": {
+      "projectType": "library",
+      "root": "libs/customer-portal/signup",
+      "sourceRoot": "libs/customer-portal/signup/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/signup/tsconfig.lib.json",
+              "libs/customer-portal/signup/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/customer-portal/signup/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/customer-portal/signup/jest.config.js",
+            "tsConfig": "libs/customer-portal/signup/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/signup/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-login": {
+      "projectType": "library",
+      "root": "libs/customer-portal/login",
+      "sourceRoot": "libs/customer-portal/login/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/login/tsconfig.lib.json",
+              "libs/customer-portal/login/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/customer-portal/login/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/customer-portal/login/jest.config.js",
+            "tsConfig": "libs/customer-portal/login/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/login/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-auth-layout": {
+      "projectType": "library",
+      "root": "libs/customer-portal/auth-layout",
+      "sourceRoot": "libs/customer-portal/auth-layout/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/auth-layout/tsconfig.lib.json",
+              "libs/customer-portal/auth-layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/customer-portal/auth-layout/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/customer-portal/auth-layout/jest.config.js",
+            "tsConfig": "libs/customer-portal/auth-layout/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/auth-layout/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "customer-portal-site-layout": {
+      "projectType": "library",
+      "root": "libs/customer-portal/site-layout",
+      "sourceRoot": "libs/customer-portal/site-layout/src",
+      "prefix": "rubicon",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/customer-portal/site-layout/tsconfig.lib.json",
+              "libs/customer-portal/site-layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/customer-portal/site-layout/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/customer-portal/site-layout/jest.config.js",
+            "tsConfig": "libs/customer-portal/site-layout/tsconfig.spec.json",
+            "setupFile": "libs/customer-portal/site-layout/src/test-setup.ts"
           }
         }
       },

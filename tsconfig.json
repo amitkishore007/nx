@@ -58,6 +58,18 @@
       ],
       "@rubicon/customer-portal/dashboard": [
         "libs/customer-portal/dashboard/src/index.ts"
+      ],
+      "@rubicon/customer-portal/signup": [
+        "libs/customer-portal/signup/src/index.ts"
+      ],
+      "@rubicon/customer-portal/login": [
+        "libs/customer-portal/login/src/index.ts"
+      ],
+      "@rubicon/customer-portal/auth-layout": [
+        "libs/customer-portal/auth-layout/src/index.ts"
+      ],
+      "@rubicon/customer-portal/site-layout": [
+        "libs/customer-portal/site-layout/src/index.ts"
       ]
     }
   },
